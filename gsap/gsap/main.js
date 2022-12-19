@@ -1,6 +1,7 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
+import { gsap } from './gsap.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
