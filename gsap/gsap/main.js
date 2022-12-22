@@ -1,9 +1,22 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
-import { gsap } from './gsap.js'
+import { gsap } from 'gsap'
 
 document.querySelector('#app').innerHTML = `
+	<div class="list-1">
+		<div class="square"></div>
+	</div>
+	<div class="list-2">
+		<div class="square"></div>
+	</div>
+	<div class="list-3">
+		<div class="square"></div>
+	</div>
+	<div class="list-4">
+		<div class="square"></div>
+	</div>
+
   <div>
 	<a href="https://vitejs.dev" target="_blank">
 	  <img src="/vite.svg" class="logo" alt="Vite logo" />
