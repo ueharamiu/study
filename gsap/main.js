@@ -1,7 +1,7 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
-import { gsap } from 'gsap'
+import { gsapConfig } from './gsap_config.js'
 
 document.querySelector('#app').innerHTML = `
 	<div class="list-1">
@@ -33,5 +33,6 @@ document.querySelector('#app').innerHTML = `
 	</p>
   </div>
 `
-
+gsapConfig( document.querySelector( '#app' ) )
 setupCounter(document.querySelector('#counter'))
+
