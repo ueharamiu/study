@@ -25,11 +25,21 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
+  margin: 0 auto;
+  /* display: flex; */
   place-items: center;
   min-width: 320px;
+  /* max-width: 1280px; */
   min-height: 100vh;
+}
+
+ul {
+	padding-left: 0;
+}
+
+ul,
+li {
+	list-style: none;
 }
 
 h1 {
@@ -38,7 +48,6 @@ h1 {
 }
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -102,7 +111,7 @@ button:focus-visible {
 .list-4 {
 	width: 200px;
 	height: 200px;
-	margin: 10px;
+	margin: 0 auto;
 }
 .list-1 {
 	background: #87cefa;
@@ -115,4 +124,38 @@ button:focus-visible {
 }
 .list-4 {
 	background: #ffc0cb;
+}
+
+.article {
+	background: #ffe4e1;
+}
+.section {
+	width: 100%;
+	padding: 100px 0;
+}
+
+/* 横スクロールセクション */
+.side-scroll {
+	background: #ffc0cb;
+}
+.side-scroll-div {
+	position: relative;
+	width: 100%;
+	height: 400px;
+}
+.side-scroll-ul {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	display: flex;
+	gap: 0 60px;
+}
+.side-scroll-li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 300px;
+	background: #ffffe0;
+	font-size: 20px;
 }
