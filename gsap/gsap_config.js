@@ -1,14 +1,16 @@
-import { gsap } from 'gsap'
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin( ScrollTrigger );
 
 export function gsapConfig( element ) {
 	gsap.to(".list-1", { backgroundColor: "#000000", duration: 1, repeat: 2 });
 }
 
 // セクション2 横スクロールの実装
-let scrollDiv = document.querySelector( '.side-scroll-div' );
-let scrollUl = document.querySelector( '.side-scroll-ul' );
-
 export function gsapScroll( element ) {
+	let scrollDiv = document.querySelector( '.side-scroll-div' );
+	let scrollUl = document.querySelector( '.side-scroll-ul' );
+
 	gsap.to( scrollUl, {
 		x: () => -( 10 + scrollUl.clientWidth - scrollDiv.clientWidth ),
 		ease: 'none', // easing （アニメーションの動き）はナシ
