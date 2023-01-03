@@ -31,24 +31,29 @@ export function gsapTimeLine( element ) {
 	let timelineImg = document.querySelector( '.timeline-img' );
 	let timelineBg = document.querySelector( '.timeline-bg' );
 
-	gsap.fromTo( timelineImg, {
-		scale: 0, //０％まで縮小
-	},
-	{
-		scale: 1,
-			scrollTrigger: {
-				trigger: '.js-trigger',
-				start: 'top center'
-			}
-	});
+	gsap.set( timelineImg, { scale: 0 } );
+	gsap.set( timelineBg, { scale: 0 } );
 
-	gsap.fromTo( timelineBg, {
-		scale: 0,
-	},
-	{
-		scale: 1,
-			scrollTrigger: {
-				trigger: '.js-trigger',
-			}
-	},'>5',);
+	gsap.timeline({
+		scrollTrigger: {
+			trigger: '.js-trigger',
+			start: 'top center',
+		},
+	})
+	.from( // アニメーション前
+		timelineImg,
+		{
+			scale: 0,
+		}
+	).to( // アニメーション後
+		timelineImg,
+		{
+			scale: 1,
+		},
+	).to(
+		timelineBg,
+		{
+			scale: 1,
+		}
+	)
 }
