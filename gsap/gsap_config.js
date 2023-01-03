@@ -25,3 +25,30 @@ export function gsapScroll( element ) {
 		},
 	});
 }
+
+// タイムラインアニメーションの実装
+export function gsapTimeLine( element ) {
+	let timelineImg = document.querySelector( '.timeline-img' );
+	let timelineBg = document.querySelector( '.timeline-bg' );
+
+	gsap.fromTo( timelineImg, {
+		scale: 0, //０％まで縮小
+	},
+	{
+		scale: 1,
+			scrollTrigger: {
+				trigger: '.js-trigger',
+				start: 'top center'
+			}
+	});
+
+	gsap.fromTo( timelineBg, {
+		scale: 0,
+	},
+	{
+		scale: 1,
+			scrollTrigger: {
+				trigger: '.js-trigger',
+			}
+	},'>5',);
+}
