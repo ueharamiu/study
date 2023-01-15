@@ -1,7 +1,7 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
-import { gsapConfig, gsapScroll, gsapTimeLine } from './gsap_config.js'
+import { gsapConfig, gsapScroll, gsapTimeLine, gsapWidth } from './gsap_config.js'
 
 document.querySelector('#app').innerHTML = `
 
@@ -39,4 +39,5 @@ gsapConfig( document.querySelector( '#app' ) )
 setupCounter(document.querySelector('#counter'))
 gsapScroll( document.querySelector( '.side-scroll' ) )
 gsapTimeLine( document.querySelector( '.timeline-article' ) )
+gsapWidth( document.querySelector( '.js-show-bg' ) )
 

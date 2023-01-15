@@ -6,6 +6,31 @@ export function gsapConfig( element ) {
 	gsap.to(".list-1", { backgroundColor: "#000000", duration: 1, repeat: 2 });
 }
 
+// 画像アニメーションの実装
+export function gsapWidth( element ) {
+	let showDiv = document.querySelectorAll( '.js-show-width' );
+	let showBg = document.querySelectorAll( '.js-show-bg' );
+
+	gsap.set( showBg, { width: '0%' } );
+
+	gsap.timeline({
+		repeat: -1,
+	})
+
+	.from( showBg, {
+		width: '0%',
+	})
+	.to( showBg, {
+		width: '100%',
+		x: -220,
+		duration: 5,
+	})
+	.to( showBg, {
+		autoAlpha: 0,
+		duration: 2,
+	})
+}
+
 // セクション2 横スクロールの実装
 export function gsapScroll( element ) {
 	let scrollDiv = document.querySelector( '.side-scroll-div' );

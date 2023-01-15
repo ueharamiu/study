@@ -105,6 +105,8 @@ button:focus-visible {
   }
 }
 
+
+/* duration */
 .list-1,
 .list-2,
 .list-3,
@@ -133,6 +135,60 @@ button:focus-visible {
 	width: 100%;
 	padding: 100px 0;
 }
+
+
+/* スクロールアニメーション */
+.scroll-show-erea {
+	position: relative;
+	height: 680px;
+}
+.scroll-show-article {
+	position: fixed;
+	height: 640px;
+	left: 0;
+	width: auto;
+	top: 50%;
+}
+.scroll-show-section {
+	position: relative;
+	height: 640px;
+}
+.scroll-show-box {
+	position: relative;
+	height: 100%;
+}
+.scroll-show-top {
+	position: absolute;
+	top: 0;
+	width: 4000px;
+	z-index: 2;
+}
+.scroll-show-bottom {
+	position: absolute;
+	bottom: 0;
+	width: 4000px;
+	z-index: 2;
+}
+.scroll-show-div {
+	position: relative;
+	display: inline-block;
+	width: 200px;
+	height: 300px;
+	margin-right: 20px;
+}
+.scroll-show-bg {
+	position: absolute;
+	display: inline-block;
+	background: #f0f8ff;
+	width: 100%;
+	height: 300px;
+}
+.scroll-show-number {
+	background: #ffffe0;
+	height: 300px;
+	width: 100%;
+}
+
 
 /* 横スクロールセクション */
 .side-scroll {
