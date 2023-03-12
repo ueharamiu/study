@@ -11,24 +11,74 @@ export function gsapWidth( element ) {
 	let showDiv = document.querySelectorAll( '.js-show-width' );
 	let showBg = document.querySelectorAll( '.js-show-bg' );
 
-	gsap.set( showBg, { width: '0%' } );
+	// console.log(showDiv.length);
+	// console.log(showBg.length);
+	for( let i = 0; i <= showDiv.length; i++ ) {
+		gsap.set( showBg[i], { width: '0%' } );
+		console.log(showBg[i]);
+		gsap.timeline({
+			repeat: -1,
+		})
+			.from( showBg[i], {
+				width: '0%',
+			})
+			.to( showBg[i], {
+				width: '100%',
+				x: -220,
+				duration: 5,
+			})
+			.to( showBg[i], {
+				y: '100vh',
+				ease: 'bounce.out',
+				// stagger: {
+					// 	each: 0.01, // ばらす間隔（秒）
+					// 	from: 'random',
+					// }
+				})
+			if( i % 2 == 1 ) {
+				gsap.to( showBg[i], {
+					duration: 2,
+					backgroundColor: "#000000",
+				})
+				console.log(i);
+			}
+			else if( 0 == i % 2 ) {
+				gsap.to( showBg[i], {
+					duration: 5,
+				})
+				// console.log(showBg[i]);
+			}
+			else {
+				// console.log(i);
+				gsap.to( showBg[i], {
+					backgroundColor: "#fff",
+				})
+			}
+	}
 
-	gsap.timeline({
-		repeat: -1,
-	})
+	// gsap.timeline({
+	// 	repeat: -1,
+	// })
 
-	.from( showBg, {
-		width: '0%',
-	})
-	.to( showBg, {
-		width: '100%',
-		x: -220,
-		duration: 5,
-	})
-	.to( showBg, {
-		autoAlpha: 0,
-		duration: 2,
-	})
+	// 	.from( showBg, {
+	// 		width: '0%',
+	// 	})
+	// 	.to( showBg, {
+	// 		width: '100%',
+	// 		x: -220,
+	// 		duration: 5,
+	// 	})
+	// 	.to( showBg, {
+	// 		y: '100vh',
+	// 		duration: 2,
+	// 		ease: 'bounce.out',
+	// 		stagger: {
+	// 			each: 0.01, // ばらす間隔（秒）
+	// 			from: 'random',
+	// 		}
+	// 	})
+
+
 }
 
 // セクション2 横スクロールの実装
